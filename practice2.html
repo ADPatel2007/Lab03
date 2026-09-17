@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head><title>CSS Font Control</title></head>
+<body>
+    <p id="dummyText" style="border-style: solid; border-width: 1px; padding: 10px;">
+        This paragraph's style will change based on your input.
+    </p>
+    <label>Border RGB (e.g., 255,0,0): <input type="text" id="borderColor"></label><br>
+    <label>Border Width (e.g., 5px): <input type="text" id="borderWidth"></label><br>
+    <label>Text RGB (e.g., 0,0,255): <input type="text" id="textColor"></label><br>
+    <button onclick="updateCSS()">Update Styles</button>
+
+    <script>
+        function updateCSS() {
+            var p = document.getElementById('dummyText');
+            p.style.borderColor = "rgb(" + document.getElementById('borderColor').value + ")";
+            p.style.borderWidth = document.getElementById('borderWidth').value;
+            p.style.color = "rgb(" + document.getElementById('textColor').value + ")";
+        }
+    </script>
+</body>
+</html>

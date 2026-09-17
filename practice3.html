@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head><title>Password Verification</title></head>
+<body>
+    <label>Password: <input type="password" id="pass1"></label><br>
+    <label>Confirm Password: <input type="password" id="pass2"></label><br>
+    <button onclick="verifyPassword()">Validate</button>
+
+    <script>
+        function verifyPassword() {
+            var p1 = document.getElementById('pass1').value;
+            var p2 = document.getElementById('pass2').value;
+
+            if (p1.length < 8) {
+                alert("Password must be at least 8 characters long.");
+            } else if (p1 !== p2) {
+                alert("Passwords do not match.");
+            } else {
+                alert("Passwords match!");
+            }
+        }
+    </script>
+</body>
+</html>
+
